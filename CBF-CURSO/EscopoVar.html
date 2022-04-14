@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo de Variaveis</title>
+</head>
+<body>
+    <h1>Aula 31</h1>
+    <hr>
+    <script>
+
+        var nomeCor = "Vermelho";
+        var i = 1;
+
+        function cor (){
+            var nomeCor = "Azul"; //var com o mesmo nome da var na linha 14 porém em escopo diferente e declarada como uma variavel diferente.
+            // nomeCor = "verde"; 
+            document.write(this.nomeCor + "<br>" + nomeCor + "<br>"); //this foi usado para se referir a var fora do escopo local da minha function, a var na linha 14. 
+        }
+         cor(); 
+        for(i = 0 ; i < 10; i++){}
+        document.write(i);
+        //  document.write(nomeCor);
+    </script>
+</body>
+</html>

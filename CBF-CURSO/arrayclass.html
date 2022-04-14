@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <style>
+        h1{
+            background-color: rgba(41, 40, 40, 0.105);
+            width: 341px;
+            border: 4px groove;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+   <h1>Métodos de classe Array.</h1>
+   <h2>para remover o elementos podemos usar dois metodos! <ul> <li> o POP(remove do final do array). <li> SHIFT(remove no inicio do array). 
+       <li> SPLICE (remove de qualquer posição). <br> </h2>
+        <h2>Metodos para inserir </h2>
+    <h2> <ul> <li> UNSHIFT (inseri no inicio array). <li> PUSH (inseri no final do array). </h2>
+   <script>
+        var MeusTimes=[]; 
+        MeusTimes.push("real"); // o metodo push sempre inseri no final do array.
+        MeusTimes.push("barça");
+        MeusTimes.unshift("juv"); //inseri no inicio da array
+        MeusTimes.push("bot");
+
+        MeusTimes.splice(3);
+
+        /*MeusTimes.pop(); 
+        MeusTimes.shift();*/
+
+        document.write(MeusTimes[0]  + "<br>"); 
+        document.write(MeusTimes[1]  + "<br>");
+        document.write(MeusTimes[2]  + "<br>");
+        document.write(MeusTimes[3]  + "<br>");
+   </script> 
+</body>
+</html>

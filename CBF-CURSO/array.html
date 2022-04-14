@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <style>
+        h1{
+            box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.432);
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+            height: 100px;
+            width: 300px;
+            border: 1px groove;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aula sobre Array unidimensional</h1>
+    <p>Que é controlado por apenas 1 indice</p>
+    <script>
+        var pessoas = [];
+       /* pessoas.push("felipe"); //0         inseri 4 elementos na minha array pessoas 
+        pessoas.push("joao"); //1
+        pessoas.push("camila"); //2
+        pessoas.push("maria");//3
+        */
+       /* pessoas[0]="felipe"; //0              outra forma de inserir os mesmos 4 elementos na array pessoas
+        pessoas[1]="joao"; //1
+        pessoas[2]="camila";//2
+        pessoas[3]="maria";//3
+        
+
+        document.write(pessoas[0]); //assim que se chama uma array */
+    </script>
+    <script>
+        var times = ["real", "barça", "city", "juv", "fla", "bot"]; //outra forma de manipular arrays
+        var MeusTimes=[]; //add da array Times, nessa array MeusTimes
+        MeusTimes.push([3]); // o metodo push sempre inseri no final do array.
+        MeusTimes.push([0]);
+        MeusTimes.push([2]);
+        MeusTimes.push([4]);
+
+        document.write(times[MeusTimes[0]] + "<br>"); 
+        document.write(times[MeusTimes[1]] + "<br>");
+        document.write(times[MeusTimes[2]] + "<br>");
+        document.write(times[MeusTimes[3]] + "<br>");
+    </script>
+</body>
+</html>

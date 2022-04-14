@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sobre While</title>
+    <link rel="stylesheet" href="aboutWhile.js">
+</head>
+<body>
+    <h1>Comando de Loop While(Enquanto)</h1>
+    <p>Sintaxe e Estrutura Base!</p> 
+    <h2>
+        p1;{ <br>
+        while(p2){ <br> 
+        //comandos;   
+        } <br>
+           p1 = inicialização do contador. <br>
+           p2 = condição de execução do loop. <br>
+           p3 = incremento ou decremento do contador. 
+       </h2>
+       <h1>Quando se usa o For e quando se usa o While??</h1>
+       <h2>em vetor(array) e matriz dê preferencia ao For pois eu vou saber o numero de execuções.</h2>
+       <h2>o While eu vou usar quando eu não tenho certeza do numero de execuções.</h2>
+       <script>
+           /*
+            for(p1;p2;p3){
+           }
+           */
+          var num; 
+           for(num=0;num<10;num++){
+               document.write(num+ "<br>");
+           }
+           document.write("<hr>"); //linha 
+           /*
+             p1;
+           while(p2){
+                p3; 
+           }
+           */  
+           var num;
+           // while tradicional
+           num=0;
+           while(num<10){
+               document.write("teste1" + "<br>"); 
+               num++;
+           }
+           document.write("<hr>"); //linha  
+           //while resumido
+           num=10;
+           while(num--){
+               document.write("teste2" + "<br>"); 
+               }
+           document.write("<hr>"); //linha  
+           num=true;
+           cont=0;
+           while(num){
+               document.write("teste3" + "<br>"); 
+                cont++; 
+                if(cont>9){
+                    num=false;
+                }   
+            }
+       </script>
+</body>
+</html>

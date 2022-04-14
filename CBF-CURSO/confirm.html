@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Confirm</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        p{
+            
+            background-color: grey;
+            color: rgba(0, 0, 0, 0.719);
+            padding: 20px;
+            margin: 10px;
+            border: groove;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo do Método Confirm!</h1>
+    <p>O diferencial do <b>Método confirm</b>  é que ele vai inserir um texto e dois botões, o de <b>"ok"</b> e <b>"cancelar"</b> .
+        <br> O Botão de "ok" Retorna true, enquanto o Botão "cancelar" retorna false.
+    </p>
+    <script>
+        var nome = prompt("Digite seu nome!!!");
+        var res = confirm(nome + "\n" + "Deseja continuar?");
+        window.alert(res); 
+        document.write(nome);
+        //sempre que eu quiser quebrar um linha dentro do alert, promt ou confirm eu uso o "\n".  
+    </script>
+</body>
+</html>

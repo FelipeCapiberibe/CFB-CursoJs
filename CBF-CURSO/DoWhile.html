@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While</title>
+</head>
+<body>
+    <h1>diferença entre While e Do While.</h1>
+    <p>o loop Do While tem a garantia de execução do bloco pelo menos 1 vez, pq faz o teste no final</p>
+    <p>Enquanto o While executa e se não for true ele já não considera a condição</p>
+    
+    
+    
+    <script>
+    /*  while, nesse caso como o valor é 10 e o parametro é 5 ele não vai executar o bloco
+            num=10; 
+        while(num<5){
+            //comandos
+        }
+    */
+   /* Do While, Executa primeiro o bloco para depois verificar a veracidade. 
+   num=10; 
+   do{
+       //comandos
+   }while(num<5); 
+   */ 
+  var num = 12; 
+  /*
+  while(num<10){
+      document.write("teste" + "<br>");  
+      num++;
+  }
+  */
+  document.write("<hr>"); 
+
+  do{
+      document.write("teste" + "<br>"); 
+      num++; 
+  }while(num<10); 
+    
+    </script>
+
+</body>
+</html>

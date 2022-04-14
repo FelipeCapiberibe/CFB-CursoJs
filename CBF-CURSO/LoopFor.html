@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comando de Loop For</title>
+    <link rel="stylesheet" href="comandoloop.js">
+    <style>
+        p{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>O comando for precisa de três parâmetros</h1>
+    <p>Sintaxe e Estrutura Base!</p> 
+    <h2>
+     for(p1; p2; p3){ <br>
+            comandos; <br> 
+        } <br>
+        p1 = inicialização do contador. <br>
+        p2 = condição de execução do loop. <br>
+        p3 = incremento ou decremento do contador. 
+    </h2>
+    <script>
+      /*
+        var cont = 7;
+        for(cont=cont; cont<10; cont++)  {
+            document.write("teste" + "<br>");
+        } 
+      */
+   
+     /*
+     num.push[0],
+     num.push[1],
+     num.push[2],
+     num.push[3],
+     num.push[4];
+     */    
+    var times = [
+        ["fla", 10], //linha 0
+        ["bot", 5], //linha 1 
+        ["cor", 9], //linha 2 
+        ["int", 4] //linha 3
+        ];         
+        for(var lista=0; lista<4; lista++){ /*esse primeiro for controla os indices raiz dos times que são as 4 arrays dentro da
+            array grande. */
+            for(var numeros=0; numeros<2; numeros++){ //controlar os indices dentro das arrays secundarias
+                document.write(times[lista][numeros] + " ");
+            }
+        document.write("<br>");
+    }
+   
+    /*
+     for(cont=0; cont<5; cont++){
+        document.write(num[cont] + "<br>"); 
+     }
+    */
+
+    </script>
+</body>
+</html>

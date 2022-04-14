@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos array.</title>
+</head>
+<body>
+    <script>
+        var times=[],timesGrandes=[],timesPeque=[],pos;
+
+        timesGrandes.push("real madrid");
+        timesGrandes.push("barcelona");
+        timesGrandes.push("juventus"); 
+        timesGrandes.push("milan");
+ 
+        timesPeque.push("corinthians");
+        timesPeque.push("intenacional");
+        timesPeque.push("flamengo"); 
+        timesPeque.push("palmeiras");
+        
+        timesGrandes.pop();
+        
+        times=timesGrandes.concat(timesPeque); //concatenando arrays
+        
+        document.write(times[0]+"<br>");
+        document.write(times[1]+"<br>");
+        document.write(times[2]+"<br>");
+        document.write(times[3]+"<br>");
+        document.write(times[4]+"<br>");
+        document.write(times[5]+"<br>");
+        document.write(times[6]+"<br>");
+        document.write(times[7]+"<br>");
+        document.write("Quantidade de times grandes é: " + timesGrandes.length + "<br>") //.length retorna quantos elementos eu tenho dentro da mochila
+        document.write("Quantidade de times pequenos é: " + timesPeque.length + "<br>")
+        document.write("Quantidade de times no total é: " + times.length) 
+        /*var MeusTimes=[], pos;  
+        var num = [4,6,3,8,9,1,2,7];
+        var numeros; 
+        num.sort(); //ordena os elementos do array na ordem crescente.
+        num.reverse(); //ordena os elementos do array na ordem descrescente.
+        numeros=num.join(); //o join faz o retorno de todos esses elementos juntos numa string separada por virgula
+        document.write(numeros+"<br>");
+        document.write(num[1]+"<br>");
+        document.write(num[2]+"<br>");
+        document.write(num[3]+"<br>");
+        document.write(num[4]+"<br>");
+        document.write(num[5]+"<br>");
+        document.write(num[6]+"<br>");
+        document.write(num[7]+"<br>");
+        */
+        /*MeusTimes.push("real");
+        MeusTimes.push("barça");
+        MeusTimes.push("juv"); 
+        MeusTimes.push("bot");
+        pos=MeusTimes.indexOf("real"); //O Método indexOf mostra a posição do que foi pedido entre parenteses.
+        if(pos < 0) {
+            document.write("Item não está na mochila");
+        }else{
+            document.write("Item Está na mochila, <br> na posição: ", + pos); 
+        }*/
+    </script>
+</body>
+</html>

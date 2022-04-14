@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores lógicos AND e OR!</title>
+</head>
+<body>
+    <h1>Operadores Logicos AND&& e OR||</h1>
+    <h2>|| - OR</h2>
+    V  e  F  == verdadeiro.  <br>
+    F  e  V  == verdadeiro. <br>
+    V  e  V  == verdadeiro.  <br>
+    F  e  F  == falso. 
+    <h2>&& - AND</h2>
+    V  e  F  == falso. <br>
+    F  e  V  == falso. <br>
+    V  e  V  == verdadeiro. <br> 
+    F  e  F  == falso. 
+    <script>
+        var média = 7; 
+        //          V             V
+        if (((média >= 7) || (média <= 10)) //V
+            
+            || //V
+
+        //       V              F
+            ((média >=1) && (média <= 6))){ //F
+            document.write( "<br>"+"Passou");
+        }else{
+            document.write("<br>"+"Reprovou"); 
+        } 
+    </script>
+    <script>
+    
+    </script>
+</body>
+</html>

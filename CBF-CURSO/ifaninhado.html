@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O uso de Múltiplos IF ANINHADO</title>
+</head>
+<body>
+    <h1>If ANINHADO com Múltiplos retornos.</h1>
+    <script>
+        var nota = 100;
+        var res;  
+        //aprovado >= 60
+        //recuperação >= 40 && <60 
+        //reprovado <40
+        if(nota>= 60){
+            res="Aprovado!";
+            if(nota>=90)
+            res+="<br>"+"Com nota A";
+            if(nota>=95)
+                res+=", É uma excelente nota!";
+                if(nota==100)
+                    res+="<br>"+"Párabens pela nota Maxima!";
+        }else if(nota>=40){ /*else if((nota>=40)&&(nota<60))pode ser assim tambem.res="recuperação";*/
+            res="recuperação";
+        }else if(nota<=39){
+            res=" com nota Baixa";
+        if(nota<=20)
+            res="<br>"+" tu é mt Burro";
+        if(nota<=10)
+                res="<br>"+" Vai fazer tik-tok infeliz";     
+    }
+        document.write(res); 
+    </script>
+</body>
+</html>

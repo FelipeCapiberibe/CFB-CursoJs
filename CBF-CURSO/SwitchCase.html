@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch - case</title>
+    <style>
+        h1{
+            text-align: center;
+            height: 100px;
+            width: 400px;
+            border: 1px groove rgb(128, 128, 128);
+            margin: auto; /*Centraliza a box*/
+            padding: 10px;
+            box-shadow: 4px 4px 15px 1px rgba(0, 0, 0, 0.2);
+            border-radius: 1px;
+        } 
+        div{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Curso de JS</h1>
+    <h2> <ul> <li> Switch - case! </ul></h2>
+    <ul> <li> A estrutura condicional switch permite executar um bloco de código diferente de acordo com cada opção (cada case) especificada. <br>
+        Seu uso é indicado quando os valores a serem analisados nessas condições são pré-definidos.
+       <li> Utilizo o <b>If</b> quando eu não tenho certeza do valor da variavel 
+            e o <b>Switch</b> eu uso quando eu sei extamente os valores que poderão estar nessa variavel.</ul>
+        
+    <div>
+      
+    <script>
+        var pos, msg, pontos; 
+        pontos=90; 
+        if(pontos >= 100){
+            pos=1;
+        }else if(pontos >= 80){
+            pos=2;
+        }else if(pontos >= 60){
+            pos=3;
+        }else{
+            pos=0;
+        }
+        switch(pos){
+            case 1:
+                msg="Parabens <br> Chegou em primeiro lugar, medalha de ouro! <p>&#x1F947</p>"; //Colocando emoji <p>&#x</p>
+                break 
+            case 2:
+                msg="Parabens pelo esforço <br> Você ficou em segundo lugar, medalha de prata! <p>&#x1F948</p>" 
+                break
+            case 3: 
+                msg="Parabens pela dedicação <br> Você ficou em terceiro lugar, medalha de bronze! <p>&#x1F949</p>"
+                break
+            default:
+                msg="Não foi ao podio, não obteve medalha! <p>&#x1F3AB</p>"
+        }
+        switch(pos){
+            case 1:
+            case 2:
+            case 3: 
+                msg+=" <br> subiu ao pódio! <p>&#x1F3CA</p>"
+                break
+            default:
+                msg+=" <br> não obteve coloração!"
+        }
+        document.write(msg, "Pontuação total do Atleta " + pontos); 
+    </script>
+    </div>
+</body>
+</html>

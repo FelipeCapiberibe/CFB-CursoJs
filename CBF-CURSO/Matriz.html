@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz</title>
+</head>
+<body>
+    <h1>Arrays Multidimensionais</h1>
+    <script>
+        var farmacia=new Array(); // var farmacia=[]; 
+
+        var item1=["dipirona", 3 + "<br>"]
+            item2=["clorexedina", 1 + "<br>"]
+            item3=["vancomicina", 4 + "<br>"] 
+            item4=["fluoxetina", 9 + "<br>"] 
+            
+            farmacia.push(item1)
+            farmacia.push(item2)
+            farmacia.push(item3)
+            farmacia.push(item4)
+
+            document.write("Temos " + farmacia[0][0] + " na farmacia!" +"<br>"+ "Quantidade: " + farmacia[0][1]);
+            document.write("Temos " + farmacia[1][0] + " na farmacia!" +"<br>"+ "Quantidade: " + farmacia[1][1]);
+            document.write("Temos " + farmacia[2][0] + " na farmacia!" +"<br>"+ "Quantidade: " + farmacia[2][1]);
+            document.write("Temos " + farmacia[3][0] + " na farmacia!" +"<br>"+ "Quantidade: " + farmacia[3][1]);
+    </script>
+</body>
+</html>

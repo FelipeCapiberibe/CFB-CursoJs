@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Forms com Javascript</title>
+    <style>
+        label {
+            display: block; /* display block coloca os blocos um abaixo do outro*/
+        }
+        input {
+            display: block;
+            /* margin: 1px;
+            padding: 2px; */
+        }
+        /* .button 
+            margin: 3px;
+            padding: 5px;
+         */
+         input[type=submit], label {
+             margin-top: 10px;
+         }
+    </style>
+</head>
+<body>
+    <form name="curso1" id="curso1" action="#" method="post">
+        <label>Nome</label>
+        <input type="text" name="fNome" id="teste" value="Primeiro - 1">
+        <label>Senha</label>
+        <input type="password" name="fSenha" value="123">
+        <input type="submit" name="btEnviar" value="Enviar" class="button">
+    </form> 
+    <hr>
+    <form name="curso2" id="curso2" action="#" method="post">
+        <label>Nome</label>
+        <input type="text" name="fNome" id="teste" value="Segundo - 2">
+        <label>Senha</label>
+        <input type="password" name="fSenha" value="123">
+        <input type="submit" name="btEnviar" value="Enviar" class="button">
+    </form> 
+    <hr>
+    <script>
+
+        document.write(document.getElementById("curso1").elements[0].name);
+
+        var formulario=document.forms[0];
+        var elementos = formulario.elements;
+
+        for(var indice=0; indice < elementos.length -1 ; indice++){
+            elementos[indice].style.backgroundColor="#ddd";
+            elementos[indice].value="testeaula";
+        }
+
+        
+         
+
+        // var formulario = document.forms["curso1"].elements[1].value; 
+        // document.write(formulario);
+
+        // var formulario=document.forms.length;
+        // document.write(formulario); 
+    </script>
+</body>
+</html>

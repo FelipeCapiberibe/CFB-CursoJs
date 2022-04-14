@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular elementos (GetElementeById)</title>
+
+</head>
+<body>
+    <h1>Manipular elementos HTML com JavaScript</h1> 
+    <p id="texto">Teste</p>
+
+    <div id="caixa">TesteCaixa</div>
+
+    <hr>
+    <script> 
+        /*
+        document.getElementById("texto").style.color="#f00"; 
+        document.getElementById("texto").style.fontSize= "40px";
+        */
+
+        var txt=document.getElementById("texto");
+        txt.style.fontSize= "40px";
+        txt.style.color="#f00";
+
+        var cx=document.getElementById("caixa"); 
+        cx.style.fontFamily="Arial";
+        cx.style.backgroundColor= "black";
+        cx.style.color="white";
+        cx.style.margin="100px";
+        cx.style.padding="70px";
+        cx.style.border="10px groove grey";
+        cx.style.height="30px";
+        cx.style.width="100px";
+        cx.style.textAlign="center";
+    </script>    
+    <script src="getelementbyid.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comando If-Else</title>
+    <style>
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding: 3px;
+            margin: 3px;
+        }
+        li {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <script> 
+       /*if(10 < 11){ //O teste logico retorna True(1) ou False(0), que são constantes pré definidas.
+            document.write("Verdadeiro");
+       }*/ 
+       var V1, V2, tx1, tx2; 
+      V1 = 10; 
+      V2 = 10; 
+      tx1="verdadeiro";
+      tx2="false";
+      if(V1 > V2){ 
+          document.write(tx1);
+          window.alert(tx1);
+      } else {
+          document.write(tx2);
+          window.alert(tx2);  
+      } 
+         
+    </script>
+    <h1>Operadores de Comparação</h1>
+    <ul>
+        <li> > <br> maior que  <br> 10 > 5 ( 10 maior que 5); <br> resposta: True. 
+        <li> <  <br> menor que <br> 10 < 5 ( 10 menor que 5); <br> resposta: False.
+        <li> >= <br> maior ou igual á <br> 10 >= 5 ( 10 é maior ou igual a 5); <br> resposta: True.
+        <li> <= <br> menor ou igual á <br> 10 <= 5 ( 10 é menor ou igual a 5); <br> resposta: False.
+        <li> != <br> diferente <br> 10 != 5 ( 10 é diferente de 5); <br> resposta: True. 
+        <li> == <br> igualdade <br> 10 == 5 ( 10 é igual a 5); <br> resposta: False.  
+    </ul>
+</body>
+</html>

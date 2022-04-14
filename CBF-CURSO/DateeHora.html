@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date() - Manipular Data e Hora.</title>
+</head>
+<body>
+    <h1>Aula 28</h1>
+    <script>
+        var data = new Date();
+
+        var novaData = new Date(); 
+
+        novaData.setDate(data.getDate()+2); //pode passar Sete parâmetros aqui, Ano, Mes, Dia, Hora, Min, Seg, Mil. 
+
+        var diasemana = novaData.getDay(); 
+        var dia = novaData.getDate(); 
+        var mes = novaData.getMonth();
+        var ano = novaData.getFullYear();         
+        var hora = novaData.getHours(); 
+        var minutos = novaData.getMinutes();
+        var segundos = novaData.getSeconds();
+        
+        
+        var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]; 
+        var semanas = [ "Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado"];
+        
+        document.write(semanas[diasemana] + ", " + dia + " De " +  meses[mes] + " De " + ano +  "<br>" ); 
+        document.write(hora + ":" + minutos + ":" + segundos );
+
+        // document.write(data + "<br>" + "Hoje é o dia " + dia + " Do mês " + mes);
+        // document.write( "<br>" + "tem quantos segundos " + segundos);
+        // document.write( "<br>" + "Os minutos " + minutos);
+        // document.write( "<br>" + "As Horas " + hora);
+        // document.write( "<br>" + "O ano " + ano);   
+    </script>
+    <!-- <script src="Aula28.js">Aula</script> -->
+</body>
+</html>

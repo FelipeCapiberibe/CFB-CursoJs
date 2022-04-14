@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções - Criando suas próprias funções.</title>
+</head>
+<body>
+    <hr> 
+    <h1>Aula 30</h1>
+    <hr>
+    <h2>Função simples, sem parametros!</h2>
+    <pre><code>   
+function nome_da_função(){
+    //comandos
+    //console.log(); funções que imprimem valores.
+    //document.write();
+ }
+    nome_da_função();
+    </code></pre>
+    <hr>
+    <h2>Função com Parametros!</h2>
+    <pre>
+function nome_da_função(n1, n2){
+    //comandos
+    //console.log(); funções que imprimem valores.
+    //document.write();
+ }
+    nome_da_função();
+    </pre>
+    <hr>
+    <script>
+        var numeros = [10, 6, 7, 9, 1];
+        function media (nums) {
+            var tamanho = nums.length; 
+            var soma = 0; 
+            for (var res = 0; res < tamanho; res++) {
+                soma += nums[res];
+            }
+            return Math.round(soma/tamanho); //Math.round serve para ARREDONDAR OS VALORES. 
+        }
+        document.write(media(numeros));
+        // media(numeros);
+        
+        
+        
+        
+        
+        
+        // function TesteDeFuncao() { //função simples sem paranmetros entre parenteses. 
+        //     document.write("Teste Executado com Sucesso!");
+        // }
+        // TesteDeFuncao(); 
+
+
+
+        // function somar(n1, n2) { //função com parametros.
+            //     var res = n1 + n2; 
+            //     document.write(res + "<br>"); 
+            // }
+            // somar (5, 3);
+            // somar (192, 325);
+            // somar (-10, 5);
+
+
+            // function soma(n1, n2){
+            //     return n1+n2;       //function que retorna 
+            // }
+            // // document.write(soma(3,7));
+            // var res = soma(3,8); 
+            // document.write(res); 
+            
+    </script>
+</body>
+</html>

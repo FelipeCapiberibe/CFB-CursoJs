@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 34</title>
+    <style>
+        #div2{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            background-color: #f00;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        var px = 0; // Controlar o posicionamento horizontal
+        var py = 0;
+
+        document.addEventListener("keydown", function(event){
+            var obg=document.getElementById("div1"); 
+            var tecla=event.keyCode;
+            // 37=Esquerda - 38=cima - 39=direita - 40=baixo
+
+            if( tecla == 37 ) {
+                px-=10;
+                
+                obj.style.left = px + "px";
+            }
+            
+            else id( tecla == 38 ) {
+                py-=10;
+                
+                obj.style.top = py + "px";
+            }
+            
+            else id( tecla == 39 ) {
+                py+=10;
+                
+                obj.style.left = px + "px";
+            }
+        });
+
+
+    </script>
+
+    <div id="div1"></div>
+
+</body>
+</html>
