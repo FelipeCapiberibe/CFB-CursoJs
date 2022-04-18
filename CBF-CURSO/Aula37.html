@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 37</title>
+    <style>
+        #div1{
+            background-color: #f00;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style> 
+    <script>
+       var direcaoX;
+       var direcaoY;
+       var posicaoX;
+       var posicaoY;
+       var velocidade;
+       var objeto; //Essa variavel vai indicar qual objeto eu vou trabalhar.    
+       var tempo; // Variavel para o timer, para o setinterval que vou criar.   
+       
+       function iniciar () { // Essa function vai ser responsavel por iniciar nossas variaveis globais.
+            direcaoX= 0;
+            direcaoY= 0; 
+            posicaoX= 0;
+            posicaoY= 0;
+            velocidade= 50; 
+            objeto= document.getElementById("div1");
+            document.addEventListener("keydown", teclaKDown);  // Criar eventos para controlar as teclas.
+            document.addEventListener("keyup", teclaKUp);
+            tempo= setInterval(enterFrame,20);
+        }
+
+        function teclaKDown(){ //funcao para identificar quando a tecla for pressionada.
+             var tecla = event.keyCode;
+             if(tecla==37){
+                 direcaoX=-1;
+             }else if(tecla==38){
+                 direcaoY=-1;
+             }else if(tecla==39){
+                 direcaoX= 1;
+             }else if(tecla==40){
+                 direcaoY= 1;
+             }
+        }
+        function teclaKUp(){ //funcao para identificar quando a tecla for liberada.
+             var tecla = event.keyCode;
+             if(tecla==37){
+                 direcaoX= 0;
+             }else if(tecla==38){
+                 direcaoY= 0;
+             }else if(tecla==39){
+                 direcaoX= 0;
+             }else if(tecla==40){
+                 direcaoY= 0;
+             }
+        }
+        function enterFrame(){ //Nessa funcao vamos atualizar as posicoes.
+            posicaoX+=direcaoX*velocidade;
+            posicaoY+=direcaoY*velocidade;
+            obj.style.left=px+"px"; //px + a unidade de medida px. 
+            obj.style.top=py+"px";
+        }
+
+        window.addEventListener("load", iniciar);
+    
+    
+    // keydown para idenficiar quando a tecla for precionada, e keyup para indicar quando a tecla for liberada.
+    </script>
+</head>
+<body>
+    <!-- <h1>Base para movimentação de personagens em games.</h1> -->
+    <div id="div1"></div>
+</body>
+</html>

@@ -19,25 +19,25 @@
 </head>
 <body>
     <script>
-        function msg(){
-            alert("teste");
+        function EventoClick(){
+            alert("Deu Certo o Click");
         }
-        function cor1(){
+        function CorMouseSobre(){
             var obj=document.getElementById("dv1"); 
-            obj.style.backgroundColor="#fff";
+            obj.style.backgroundColor="grey";
         }
-        function cor2(){
-            var obj=document.getElementById("dv1"); 
-            obj.style.backgroundColor="#f00";
+        function CorMouseFora(){
+            var obj=document.getElementById("dv1"); //aqui eu pego meu id 
+            obj.style.backgroundColor="white";
         }
         // Inicialização de eventos
         function addEventos(){
-            var obj=document.getElementById("dv1");
-            obj.addEventListener("click", msg);
-            obj.addEventListener("mouseover", cor1);
-            obj.addEventListener("mouseout", cor2);
+            var obj=document.getElementById("dv1"); //aqui eu pego meu id
+            obj.addEventListener("click", EventoClick);
+            obj.addEventListener("mouseover", CorMouseSobre);
+            obj.addEventListener("mouseout", CorMouseFora);
         }
-        window.addEventListener("load", addEventos);
+        window.addEventListener("load", addEventos); //load: carregar!
     </script>
 
     <div id="dv1">Usando uma function para dar vida para o evento onclick na minha div</div>
