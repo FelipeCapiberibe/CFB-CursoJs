@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 39</title>
+    <style>
+        #jogador{
+            background-color: #00f;
+            width: 89px;
+            height: 89px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="jogador"></div> <br> <br> <br> <br>  
+    <hr>
+    <div> 
+        <button id="botaoIniciar">Iniciar</button>
+        <button id="botaoParar">Parar</button>
+    </div>
+    <script>
+        var player;
+        var velocidade;
+        var direcaoX;
+        var direcaoY;
+        var posicaoX;
+        var posicaoY;
+        var animacao;
+        var estado; //essa variavel representa o estado da div se ela está parada ou andando
+
+        function inicia(){
+            velocidade = 3; //aqui é uma var
+            direcaoX = 1; //quando eu quero movimentar pra direita eu incremento valores positivos. se eu quiser deslocar pra direita eu incremento valores negativos.
+            direcaoY = 0;
+            posicaoX = 0; //pq tá com o px 0 no left 
+            posicaoY = 0; //pq tá com o px 0 no top
+
+            estado= 1; //1=movendo - 0=parada.
+
+            player = document.getElementById("jogador");
+            player.addEventListener("click", moverParar);
+            document.getElementById("botaoIniciar").addEventListener("click", mover);
+            document.getElementById("botaoParar").addEventListener("click", parar);
+            game();
+        }
+            function moverParar(){
+                if(estado){
+                    estado=0;
+                    player.style.backgroundColor="#f00";
+                    cancelAnimationFrame(animacao);
+                }else{
+                    estado=1;
+                    player.style.backgroundColor="#00f";
+                    animacao=requestAnimationFrame(game);
+                }
+            }
+            
+            function mover(){
+                if(!estado){ // se estador for false ou zero "!"
+                    estado=1;
+                    player.style.backgroundColor="#00f";
+                    animacao=requestAnimationFrame(game);
+                }
+            }
+            
+            function parar(){
+                    estado=0;
+                    player.style.backgroundColor="#f00";
+                    cancelAnimationFrame(animacao);
+                }
+
+        function game(){ //controle do deslocamento, movimentação
+            posicaoX += direcaoX*velocidade;//posicaoX=posicaoX+(direcaoX*velocidade); o += significa que é um incremento, que a PosicaoX recebe a propria posição mais direcaoX*value. 
+         // posicaoY += direcaoY*velocidade; //posicaoY = posicaoY + (direcaoY * velocidade); 
+            player.style.left=posicaoX+"px";
+            // player.style.top=posicaoY+"px";
+
+            if(posicaoX > 800){
+                direcaoX = -1;
+            }else if(posicaoX < 0){
+                direcaoX = 1;
+            }
+
+            animacao=requestAnimationFrame(game);
+        }
+
+        window.addEventListener("load", inicia)
+    </script>
+</body>
+</html>
