@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 41</title>
+    <style>
+        #bloco{
+            height: 100px;
+            width: 100px;
+            border: 1px solid red;
+            background-color: red;
+        }   
+    </style>
+</head>
+<body>
+    
+        <script>
+            function contador (min, max){
+                document.write(min+"<br>");
+                if (min < max){
+                    contador (++min, max);
+                }
+            }
+            // contador (0,10);
+             function fatorial (n) {
+                 if (n == 1){
+                     return 1;
+                 }
+                 return n*fatorial(n-1);
+             }
+            //  document.write(fatorial(5));
+        </script>
+        <div id="bloco"></div>
+        <script>
+            var obj=document.getElementById("bloco");
+            var ang=0; 
+            var anima; 
+            function gira(){
+                obj.style.transform="rotate("+ang+"deg)"; 
+                ang=ang+1; 
+                if (ang>360){
+                    ang=0;
+                }
+                anima = requestAnimationFrame(gira);
+            }
+            gira(); 
+        </script>
+</body>
+</html>
