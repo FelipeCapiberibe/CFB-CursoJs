@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 42</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        table, th, td, tr{
+            border: 1px solid black;
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div id="titulo"></div>
+    <table id="tabelaNotas">
+        <tr>
+            <th>Alunos</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+            <th>Resultado</th>
+        </tr>
+        <tr>
+            <td>Aluno 1</td>
+            <td>35</td>
+            <td>48</td>
+            <td id="nota1"></td>
+        </tr>
+        <tr>
+            <td>Aluno 2</td>
+            <td>20</td>
+            <td>15</td>
+            <td id="nota2"></td>
+        </tr>
+        <tr>
+            <td>Aluno 3</td>
+            <td>48</td>
+            <td>48</td>
+            <td id="nota3"></td>
+        </tr>
+        <tr>
+            <td>Aluno 4</td>
+            <td>10</td>
+            <td>50</td>
+            <td id="nota4"></td>
+        </tr>
+    </table>
+    <script>
+        var tabela = document.getElementById("tabelaNotas");
+        var nota; 
+
+        for(var i=1; i<tabela.rows.length; i++){
+            nota=parseFloat(tabela.rows[i].cells[1].innerHTML)+parseFloat(tabela.rows[i].cells[2].innerHTML);
+            tabela.rows[i].cells[3].innerHTML=nota;
+        }
+
+
+        var notas=[]; 
+            notas[0]= document.getElementById("nota1");
+            notas[1]= document.getElementById("nota2");
+            notas[2]= document.getElementById("nota3");
+            notas[3]= document.getElementById("nota4");
+            // alert(notas[0].innerHTML);
+            for ( var i = 0; i < 4; i++ ){
+                if (notas[i].innerHTML < 70){
+                    notas[i].style.color="#f00"; 
+                }else{
+                    notas[i].style.color="#00f";
+                }
+            } 
+    </script>
+</body>
+</html>
